@@ -1,8 +1,11 @@
 import Movie from '#models/movie'
+import env from '#start/env'
 import type { HttpContext } from '@adonisjs/core/http'
 
 export default class HomeController {
     async index({ view, auth }: HttpContext) {
+        const isProd = env.get('ENVIRONMENT') === 'production' ? true : false;
+
         const totalMovies = (await Movie.query()).length
 
         const comingSoon = await Movie.query()
@@ -26,6 +29,6 @@ export default class HomeController {
             .orderBy('releasedAt', 'desc')
             .limit(9)
 
-        return view.render('pages/home', { comingSoon, recentlyReleased, totalMovies })
+        return view.render('pages/home', { comingSoon, recentlyReleased, totalMovies, isProd })
     }
 }

@@ -21,14 +21,17 @@
     @end
   </div>
 
-  <div class="fixed bottom-0 right-3 flex gap-3">
-    <form action="{{ route('redis.flush', {}, { qs: { _method: 'DELETE' } }) }}" method="POST">
-      {{ csrfField() }}
+  @if(!$isProd)
+    <div class="fixed bottom-0 right-3 flex gap-3">
+        <form action="{{ route('redis.flush', {}, { qs: { _method: 'DELETE' } }) }}" method="POST">
+        {{ csrfField() }}
 
-      @button({ type: 'submit', class: 'rounded-b-none' })
-        @svg('ph:trash-fill', { class: 'mr-2' })
-        Flush Redis Db
-      @end
-    </form>
-  </div>
+        @button({ type: 'submit', class: 'rounded-b-none' })
+            @svg('ph:trash-fill', { class: 'mr-2' })
+            Flush Redis Db
+        @end
+        </form>
+    </div>
+    @end
+
 @end
