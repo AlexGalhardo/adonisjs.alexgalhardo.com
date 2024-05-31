@@ -1,8 +1,8 @@
 #!/bin/bash
-bun install
+node install
 cp .env.example .env
 docker-compose down --volumes --remove-orphans
 docker-compose up -d
-bun run migration
-bun run seed
-bun run dev
+node run migration
+node run seed
+node run dev

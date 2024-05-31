@@ -2,9 +2,9 @@
     "name": "adonisjs.alexgalhardo.com",
     "type": "module",
     "scripts": {
-        "start": "bun run build && node ./build/bin/server.js",
-        "pm2:start": "node ace build && cp .env build/.env && cp ecosystem.config.cjs build/ecosystem.config.cjs && cd build && bun install --production && pm2 start ecosystem.config.cjs",
-        "build": "node ace build && cp .env build/.env && cd build && bun install --production",
+        "start": "node run build && node ./build/bin/server.js",
+        "pm2:start": "node ace build && cp .env build/.env && cp ecosystem.config.cjs build/ecosystem.config.cjs && cd build && node install --production && pm2 start ecosystem.config.cjs",
+        "build": "node ace build && cp .env build/.env && cd build && node install --production",
         "dev": "node ace serve --watch",
         "test": "node ace test",
         "format": "prettier --write .",

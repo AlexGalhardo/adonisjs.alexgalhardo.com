@@ -2,7 +2,7 @@
 
 ### Install
 ```bash
-bun install pm2@latest -g
+node install pm2@latest -g
 ```
 
 ### These commands cover the basic functionalities of PM2 for managing Node.js applications effectively
