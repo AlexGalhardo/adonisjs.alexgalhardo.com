@@ -3,13 +3,13 @@ FROM node:20.12.2-alpine3.18 AS base
 # All deps stage
 FROM base AS deps
 WORKDIR /app
-ADD package.json package-lock.json ./
+ADD bun.lockb bun.lockb ./
 RUN npm ci
 
 # Production only deps stage
 FROM base AS production-deps
 WORKDIR /app
-ADD package.json package-lock.json ./
+ADD bun.lockb bun.lockb ./
 RUN npm ci --omit=dev
 
 # Build stage
