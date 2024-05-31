@@ -2,9 +2,8 @@
     "name": "adonisjs.alexgalhardo.com",
     "type": "module",
     "scripts": {
-        "start": "bun run build && bun run recreate:database && node ./build/bin/server.js",
-        "pm2:start:dev": "node ace build && cp .env build/.env && cp ecosystem.config.cjs build/ecosystem.config.cjs && cd build && bun install --production && pm2 start ecosystem.config.cjs",
-        "pm2:start:prod": "node ace build && cp ecosystem.config.cjs build/ecosystem.config.cjs && cd build && bun install --production && bun run recreate:database && pm2 start ecosystem.config.cjs",
+        "start:dev": "node ace build && cp .env build/.env && bun run recreate:database && cd build && bun install --production && node ./bin/server.js",
+        "start:prod": "node ace build && bun run recreate:database && cd build && bun install --production && node ./bin/server.js",
         "build": "node ace build && cp .env build/.env && cd build && bun install --production",
         "dev": "node ace serve --watch",
         "test": "node ace test",
@@ -16,7 +15,9 @@
         "migration:rollback:latest": "node ace migration:rollback",
         "migration:rollback:start": "node ace migration:rollback --batch=0",
         "recreate:database": "node ace migration:refresh --seed",
-        "drop:tables:migrate": "node ace migration:fresh --seed"
+        "drop:tables:migrate": "node ace migration:fresh --seed",
+        "pm2:dev": "node ace build && cp .env build/.env && cp ecosystem.config.cjs build/ecosystem.config.cjs && cd build && bun install --production && bun run recreate:database && pm2 start ecosystem.config.cjs",
+        "pm2:prod": "node ace build && cp ecosystem.config.cjs build/ecosystem.config.cjs && cd build && bun install --production && bun run recreate:database && pm2 start ecosystem.config.cjs"
     },
     "imports": {
         "#controllers/*": "./app/controllers/*.js",
