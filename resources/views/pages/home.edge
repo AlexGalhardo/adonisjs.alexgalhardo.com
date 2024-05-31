@@ -21,7 +21,7 @@
     @end
   </div>
 
-  @if(!$isProd)
+  {{--  @if(!$isProd)
     <div class="fixed bottom-0 right-3 flex gap-3">
         <form action="{{ route('redis.flush', {}, { qs: { _method: 'DELETE' } }) }}" method="POST">
         {{ csrfField() }}
@@ -32,6 +32,6 @@
         @end
         </form>
     </div>
-    @end
+    @end  --}}
 
 @end
