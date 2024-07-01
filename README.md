@@ -4,29 +4,29 @@
 
 ## Introduction
 
-- A simple full stack application for me learn and improve my skills in [AdonisJS 6 framework](https://adonisjs.com/)
-- Reference: [https://adocasts.com/](https://adocasts.com/)
+-   A simple full stack application for me learn and improve my skills in [AdonisJS 6 framework](https://adonisjs.com/)
+-   Reference: [https://adocasts.com/](https://adocasts.com/)
 
 ## Features & Tools
-- [x] MVC Structure
-- [x] TailwindCSS
-- [x] Edge Template Engine
-- [x] CRUDs
-- [x] Email & Password Authentication 
-- [ ] Social Login Authentication Google & Github
-- [x] Authorization
-- [x] Upload Files
-- [x] Pagination
-- [ ] Using Email (Reset Password, Verify Email)
-- [x] PM2 Process Manager
-- [x] Migrations and Seeders
-- [x] Factories Design Pattern
-- [x] Docker & Docker Compose
-- [x] Redis
-- [x] PostgreSQL
-- [ ] GitHub Actions CI/CD
-- [ ] REST API to consume data
 
+-   [x] MVC Structure
+-   [x] TailwindCSS
+-   [x] Edge Template Engine
+-   [x] CRUDs
+-   [x] Email & Password Authentication
+-   [ ] Social Login Authentication Google & Github
+-   [x] Authorization
+-   [x] Upload Files
+-   [x] Pagination
+-   [ ] Using Email (Reset Password, Verify Email)
+-   [x] PM2 Process Manager
+-   [x] Migrations and Seeders
+-   [x] Factories Design Pattern
+-   [x] Docker & Docker Compose
+-   [x] Redis
+-   [x] PostgreSQL
+-   [ ] GitHub Actions CI/CD
+-   [ ] REST API to consume data
 
 ## Development Setup Local
 
@@ -47,7 +47,6 @@ cd adonisjs.alexgalhardo.com/
 ```
 chmod +x ./setup.sh && ./setup.sh
 ```
-
 
 ## License
 

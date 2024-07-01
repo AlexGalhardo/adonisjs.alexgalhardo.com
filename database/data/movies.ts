@@ -1,5 +1,9 @@
 export const movies = [
     {
+        title: '3:10 to Yuma',
+        releaseYear: 1957,
+    },
+    {
         title: 'The 7th Voyage of Sinbad',
         releaseYear: 1958,
     },

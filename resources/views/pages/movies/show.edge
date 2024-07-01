@@ -3,32 +3,26 @@
     <meta name="description" content="{{ movie.summary }}" />
   @endslot
 
-  <div class="flex items-start space-x-4 py-4 mt-10">
-  <div class="w-1/2">
-    <img src="{{ movie.posterUrl }}" alt="Movie Poster" class="w-auto h-auto">
-  </div>
-  <div>
-    <h1 class="text-2xl font-bold">{{ movie.title }}</h1>
-    <dl class="text-sm mt-2">
-      <div class="flex">
-        <dt class="w-24 font-semibold">Writer:</dt>
-        <dd>
-          <a href="{{ route('writers.show', { id: movie.writer.id }) }}" class="text-blue-500 hover:underline">
-            {{ movie.writer.fullName }}
-          </a>
-        </dd>
-      </div>
-      <div class="flex mt-2">
-        <dt class="w-24 font-semibold">Director:</dt>
-        <dd>
-          <a href="{{ route('directors.show', { id: movie.director.id }) }}" class="text-blue-500 hover:underline">
-            {{ movie.director.fullName }}
-          </a>
-        </dd>
-      </div>
-    </dl>
-  </div>
-</div>
+  <h1>{{ movie.title }}</h1>
+
+  <dl class="text-sm py-4">
+    <div class="flex">
+      <dt class="w-24">Writer:</dt>
+      <dd>
+        <a href="{{ route('writers.show', { id: movie.writer.id }) }}">
+          {{ movie.writer.fullName }}
+        </a>
+      </dd>
+    </div>
+    <div class="flex">
+      <dt class="w-24">Director:</dt>
+      <dd>
+        <a href="{{ route('directors.show', { id: movie.director.id }) }}">
+          {{ movie.director.fullName }}
+        </a>
+      </dd>
+    </div>
+  </dl>
 
   @if (movie.abstract)
     <div class="my-8 bg-slate-100 rounded-xl p-8">
@@ -51,7 +45,7 @@
       </dl>
     </div>
 
-    <div class="w-full lg:w-1/2 mb-20">
+    <div class="w-full lg:w-1/2">
       <h3 class="font-bold text-lg">Crew</h3>
       <dl>
         @each (cineast in crew)
