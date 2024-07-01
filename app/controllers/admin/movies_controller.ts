@@ -56,7 +56,7 @@ export default class MoviesController {
     /**
      * Show individual record
      */
-    async show({ params }: HttpContext) {}
+    // async show({ params }: HttpContext) {}
 
     /**
      * Edit individual record
