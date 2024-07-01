@@ -14,19 +14,20 @@
 -   [x] Edge Template Engine
 -   [x] CRUDs
 -   [x] Email & Password Authentication
--   [ ] Social Login Authentication Google & Github
 -   [x] Authorization
 -   [x] Upload Files
 -   [x] Pagination
--   [ ] Using Email (Reset Password, Verify Email)
 -   [x] PM2 Process Manager
 -   [x] Migrations and Seeders
 -   [x] Factories Design Pattern
 -   [x] Docker & Docker Compose
 -   [x] Redis
 -   [x] PostgreSQL
+-   [ ] Social Login Authentication Google & Github
 -   [ ] GitHub Actions CI/CD
 -   [ ] REST API to consume data
+-   [ ] Emails Service
+-   [ ] Healthchecks
 
 ## Development Setup Local
 

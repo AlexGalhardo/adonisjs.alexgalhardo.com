@@ -2,9 +2,9 @@
     "name": "adonisjs.alexgalhardo.com",
     "type": "module",
     "scripts": {
-        "start:dev": "node ace build && cp .env build/.env && bun run recreate:database && cd build && bun install --production && node ./bin/server.js",
-        "start:prod": "node ace build && bun run recreate:database && cd build && bun install --production && node ./bin/server.js",
-        "build": "node ace build && cp .env build/.env && cd build && bun install --production",
+        "start:dev": "node ace build && cp .env build/.env && npm run recreate:database && cd build && npm install --production && node ./bin/server.js",
+        "start:prod": "node ace build && npm run recreate:database && cd build && npm install --production && node ./bin/server.js",
+        "build": "node ace build && cp .env build/.env",
         "dev": "node ace serve --watch",
         "test": "node ace test",
         "format": "prettier --write .",
@@ -16,8 +16,8 @@
         "migration:rollback:start": "node ace migration:rollback --batch=0",
         "recreate:database": "node ace migration:refresh --seed",
         "drop:tables:migrate": "node ace migration:fresh --seed",
-        "pm2:dev": "node ace build && cp .env build/.env && cp ecosystem.config.cjs build/ecosystem.config.cjs && cd build && bun install --production && bun run recreate:database && pm2 start ecosystem.config.cjs",
-        "pm2:prod": "node ace build && cp ecosystem.config.cjs build/ecosystem.config.cjs && cd build && bun install --production && bun run recreate:database && pm2 start ecosystem.config.cjs",
+        "pm2:dev": "node ace build && cp .env build/.env && cp ecosystem.config.cjs build/ecosystem.config.cjs && cd build && npm install --production && npm run recreate:database && pm2 start ecosystem.config.cjs",
+        "pm2:prod": "node ace build && cp ecosystem.config.cjs build/ecosystem.config.cjs && cd build && npm install --production && npm run recreate:database && pm2 start ecosystem.config.cjs",
         "prepare": "npx husky"
     },
     "imports": {
